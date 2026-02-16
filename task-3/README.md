@@ -1,7 +1,3 @@
-# FUTURE_CS_01
-
-Cyber Security Internship Tasks
-Future Interns – January 2026
 
 ## Task 3 – API Security Risk Analysis
 
