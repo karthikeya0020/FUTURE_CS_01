@@ -1,132 +1,97 @@
 # API Security Risk Analysis
 
-## Internship Program
-Cyber Security Internship – Future Interns  
-Candidate Name: DAMA KARTHIKEYA  
-CIN ID: FIT/JAN26/CS5946  
+## Overview
+
+This repository contains a professional security assessment of a publicly accessible REST API.  
+The objective of this assessment was to evaluate authentication controls, authorization mechanisms, data exposure risks, and API security posture in alignment with industry standards.
+
+The assessment was conducted using controlled and ethical testing methodologies.
 
 ---
 
-## 📌 Project Overview
+## Assessment Scope
 
-This project focuses on analyzing API security risks in modern SaaS-based applications.  
-The objective is to identify potential vulnerabilities, assess their impact, and propose mitigation strategies following industry best practices.
+- Target: JSONPlaceholder Public API
+- Focus Areas:
+  - Authentication enforcement
+  - Object-level authorization
+  - Data exposure
+  - HTTP method handling
+  - Rate limiting controls
 
-APIs are critical components of:
-- Web applications
-- Mobile applications
-- SaaS platforms
-- Third-party integrations
-
-If APIs are insecure, attackers can:
-- Access sensitive data
-- Bypass authentication
-- Abuse endpoints
-- Perform Denial of Service attacks
+No service disruption, exploitation, or malicious activity was performed during testing.
 
 ---
 
-## 🎯 Objective of the Task
+## Key Findings
 
-The primary goals of this task were:
+1. **Broken Object Level Authorization (BOLA)**
+   - User ID manipulation allows unauthorized access to other user records.
 
-1. Understand API architecture and endpoints.
-2. Identify common API security vulnerabilities.
-3. Perform risk analysis based on impact and likelihood.
-4. Provide mitigation recommendations.
-5. Prepare a professional security assessment report.
+2. **Lack of Authentication Enforcement**
+   - Endpoints accessible without any authentication mechanism.
 
----
+3. **Excessive Data Exposure**
+   - API responses return full user objects without data filtering.
 
-## 🛠 Tools & Technologies Used
+4. **Improper HTTP Method Handling**
+   - POST requests accepted without validation or authentication.
 
-- Web Browser (for endpoint testing)
-- Postman (API request testing)
-- Manual Risk Assessment Techniques
-- OWASP API Security Top 10 Reference
+5. **Absence of Rate Limiting**
+   - No restriction on repeated API requests.
 
 ---
 
-## 🔎 Step-by-Step Work Done
+## Risk Classification Framework
 
-### Step 1: API Structure Analysis
-- Identified available endpoints.
-- Reviewed request methods (GET, POST, PUT, DELETE).
-- Checked input parameters and headers.
+Findings were evaluated based on:
 
-### Step 2: Authentication & Authorization Testing
-- Tested login and token-based authentication.
-- Checked for broken authentication issues.
-- Verified role-based access control.
+- Likelihood (Low / Medium / High)
+- Impact (Low / Medium / High)
+- Overall Risk Severity
 
-### Step 3: Input Validation Testing
-- Tested improper input handling.
-- Checked for injection vulnerabilities.
-- Observed error responses and system behavior.
-
-### Step 4: Data Exposure Analysis
-- Examined API responses.
-- Checked for sensitive data leakage.
-- Verified encryption usage (HTTPS).
-
-### Step 5: Rate Limiting & Abuse Testing
-- Tested repeated requests.
-- Checked for brute-force protection.
-- Evaluated throttling mechanisms.
-
-### Step 6: Risk Assessment
-Each vulnerability was analyzed based on:
-- Severity (Low / Medium / High / Critical)
-- Impact on system
-- Likelihood of exploitation
-
-### Step 7: Mitigation Recommendations
-Provided security recommendations such as:
-- Implement strong authentication (JWT/OAuth2)
-- Enable rate limiting
-- Validate all inputs
-- Use proper encryption
-- Apply least privilege access control
+The vulnerabilities were mapped against the OWASP API Security Top 10 framework.
 
 ---
 
-## 📊 Risk Classification Model
+## Business Impact
 
-| Risk Level  | Description |
-|-------------|------------|
-| Low         | Minimal system impact |
-| Medium      | Moderate exposure risk |
-| High        | Serious security weakness |
-| Critical    | Immediate threat to system integrity |
+If present in a production environment, these vulnerabilities could lead to:
 
----
-
-## 📁 Project Deliverable
-
-- Professional API Security Risk Analysis Report (Word Document)
-- Structured vulnerability assessment
-- Risk mitigation strategy document
+- Exposure of sensitive customer data
+- Regulatory compliance violations
+- Financial penalties
+- Loss of customer trust
+- Legal and reputational damage
 
 ---
 
-## 📚 Reference Standards
+## Remediation Recommendations
 
-- OWASP API Security Top 10
-- Basic Cybersecurity Risk Assessment Frameworks
-- Industry Best Practices for API Security
+Immediate Actions:
+- Enforce authentication on all endpoints
+- Implement object-level authorization checks
+
+Short-Term Improvements:
+- Apply response filtering
+- Introduce API rate limiting
+
+Long-Term Controls:
+- Centralized API gateway security
+- Periodic security assessments
+- CI/CD-integrated security testing
 
 ---
 
-## ✅ Conclusion
+## Ethical Statement
 
-This project demonstrates practical understanding of API security auditing, vulnerability identification, and structured risk analysis methodology used in real-world cybersecurity environments.
-
-The assessment highlights how unsecured APIs can lead to major data breaches and emphasizes the importance of implementing strong security controls.
+This assessment was conducted solely on publicly available demonstration endpoints for academic and internship evaluation purposes.  
+All activities adhered to responsible security research practices.
 
 ---
 
-## 🔐 Author
+## Author
 
-DAMA KARTHIKEYA  
-Cyber Security Intern – Future Interns  
-
+Karthikeya Dama  
+Cybersecurity Intern  
+2026
