@@ -1,119 +1,97 @@
-# FUTURE_CS_01
-## Cybersecurity Internship Portfolio Repository
-### Future Interns – January 2026 Batch
+# API Security Risk Analysis
+
+## Overview
+
+This repository contains a professional security assessment of a publicly accessible REST API.  
+The objective of this assessment was to evaluate authentication controls, authorization mechanisms, data exposure risks, and API security posture in alignment with industry standards.
+
+The assessment was conducted using controlled and ethical testing methodologies.
 
 ---
 
-## Executive Overview
+## Assessment Scope
 
-This repository represents a structured portfolio of cybersecurity tasks completed as part of the Future Interns Cybersecurity Program.
+- Target: JSONPlaceholder Public API
+- Focus Areas:
+  - Authentication enforcement
+  - Object-level authorization
+  - Data exposure
+  - HTTP method handling
+  - Rate limiting controls
 
-The objective of this repository is not only task completion, but the demonstration of:
-
-- Practical security analysis capability
-- Risk-based thinking
-- Professional documentation standards
-- Ethical testing discipline
-- Continuous technical growth
-
-Each task reflects real-world security assessment methodology aligned with industry best practices.
+No service disruption, exploitation, or malicious activity was performed during testing.
 
 ---
 
-## Core Competencies Demonstrated
+## Key Findings
 
-- API Security Assessment
-- Vulnerability Identification & Validation
-- Broken Object Level Authorization (BOLA) Testing
-- Authentication & Authorization Analysis
-- Risk Severity Classification
-- Business Impact Assessment
-- Remediation Strategy Design
-- Structured Security Reporting
-- GitHub Project Organization
+1. **Broken Object Level Authorization (BOLA)**
+   - User ID manipulation allows unauthorized access to other user records.
 
----
+2. **Lack of Authentication Enforcement**
+   - Endpoints accessible without any authentication mechanism.
 
-# Task Portfolio
+3. **Excessive Data Exposure**
+   - API responses return full user objects without data filtering.
 
----
+4. **Improper HTTP Method Handling**
+   - POST requests accepted without validation or authentication.
 
-## Task 01 – API Security Risk Analysis
-
-### Objective
-To evaluate the security posture of a RESTful API by identifying authentication weaknesses, authorization flaws, data exposure risks, and improper request handling mechanisms.
+5. **Absence of Rate Limiting**
+   - No restriction on repeated API requests.
 
 ---
 
-### Assessment Methodology
+## Risk Classification Framework
 
-The assessment followed a structured workflow:
+Findings were evaluated based on:
 
-1. Endpoint Discovery & Enumeration  
-2. Authentication Enforcement Testing  
-3. Object-Level Authorization Validation  
-4. HTTP Method Manipulation Testing  
-5. Data Exposure Review  
-6. Risk Severity Classification  
-7. Business Impact Mapping  
-8. Remediation Planning  
+- Likelihood (Low / Medium / High)
+- Impact (Low / Medium / High)
+- Overall Risk Severity
 
-Testing was performed in a controlled and ethical environment using publicly accessible demonstration endpoints.
+The vulnerabilities were mapped against the OWASP API Security Top 10 framework.
 
 ---
 
-### Key Technical Findings
+## Business Impact
 
-- Lack of authentication enforcement on sensitive endpoints  
-- Broken Object Level Authorization (ID manipulation vulnerability)  
-- Excessive data exposure in API responses  
-- Improper HTTP method validation  
-- Absence of rate limiting controls  
+If present in a production environment, these vulnerabilities could lead to:
 
-Each finding includes supporting evidence and structured documentation.
-
----
-
-### Risk Analysis Approach
-
-Vulnerabilities were assessed using:
-
-- Likelihood Analysis  
-- Impact Evaluation  
-- Severity Categorization  
-- OWASP API Security Top 10 Alignment  
-
-This approach ensures technical findings are translated into measurable business risk.
+- Exposure of sensitive customer data
+- Regulatory compliance violations
+- Financial penalties
+- Loss of customer trust
+- Legal and reputational damage
 
 ---
 
-### Business Impact Perspective
+## Remediation Recommendations
 
-If similar issues existed in a production SaaS or enterprise API environment, potential consequences include:
+Immediate Actions:
+- Enforce authentication on all endpoints
+- Implement object-level authorization checks
 
-- Unauthorized data disclosure  
-- Regulatory non-compliance (GDPR / Data Protection frameworks)  
-- Reputational damage  
-- Financial penalties  
-- Loss of customer trust  
+Short-Term Improvements:
+- Apply response filtering
+- Introduce API rate limiting
 
-Security is evaluated not only technically, but strategically.
-
----
-
-## Documentation Standards
-
-All task reports are:
-
-- Professionally structured
-- Written in formal technical language
-- Evidence-supported with screenshots
-- Organized for executive and technical readability
-- Formatted in Times New Roman (Word submission standard)
-
-The goal is industry-level clarity, not academic formatting.
+Long-Term Controls:
+- Centralized API gateway security
+- Periodic security assessments
+- CI/CD-integrated security testing
 
 ---
 
-## Repository Structure
+## Ethical Statement
 
+This assessment was conducted solely on publicly available demonstration endpoints for academic and internship evaluation purposes.  
+All activities adhered to responsible security research practices.
+
+---
+
+## Author
+
+Karthikeya Dama  
+Cybersecurity Intern  
+2026
